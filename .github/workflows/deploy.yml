@@ -3,10 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Set this to your default branch if it's not "main"
-
-permissions:
-  contents: write
+      - main
 
 jobs:
   build-and-deploy:
@@ -27,14 +24,14 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Add CNAME and .nojekyll files if not exist
+      - name: Touch files
         run: |
-          [ -f "out/CNAME" ] || echo "vaultify.ai" > out/CNAME
           touch out/.nojekyll
+          echo "vaultify.ai" > out/CNAME
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: out  # The folder the action should deploy
-          branch: gh-pages  # The branch the action should deploy to
-          clean: true  # Automatically remove deleted files from the deploy branch
+          folder: out
+          branch: gh-pages
+          clean: true

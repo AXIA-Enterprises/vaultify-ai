@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/vaultify-ai' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/vaultify-ai/' : '',
+  output: 'export',
   images: {
     unoptimized: true,
   },
-  output: 'export', // Required for static HTML export
+  // The following are needed for custom domains
+  basePath: '',
+  assetPrefix: '',
 }
 
 module.exports = nextConfig

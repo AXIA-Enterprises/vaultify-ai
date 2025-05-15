@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
+  // Only use output: 'export' in production builds
+  ...(process.env.NODE_ENV === 'production' ? { output: 'export' } : {}),
   images: {
     unoptimized: true,
   },
-  // The following are needed for custom domains
-  basePath: '',
-  assetPrefix: '',
+  // Helpful for GitHub Pages
+  trailingSlash: true,
 }
 
 module.exports = nextConfig

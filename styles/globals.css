@@ -4,10 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-:root {
-  --blue-glow: 59, 130, 246;
-}
-
 html, body {
   background-color: #000;
   color: #fff;
@@ -34,26 +30,32 @@ html, body {
   background: #2563eb;
 }
 
-/* Shield glow effect */
-.glow-effect {
-  box-shadow: 0 0 80px 10px rgba(59, 130, 246, 0.3);
-  animation: pulse 3s infinite;
+/* Shadow glow effect */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  transition: box-shadow 0.3s ease;
 }
 
+.shadow-glow:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+}
+
+/* Background animation */
 @keyframes pulse {
-  0% {
-    box-shadow: 0 0 40px 10px rgba(59, 130, 246, 0.3);
+  0%, 100% {
+    opacity: 0.6;
   }
   50% {
-    box-shadow: 0 0 80px 20px rgba(59, 130, 246, 0.5);
+    opacity: 0.8;
   }
-  100% {
-    box-shadow: 0 0 40px 10px rgba(59, 130, 246, 0.3);
-  }
+}
+
+.animate-bg-pulse {
+  animation: pulse 4s ease-in-out infinite;
 }
 
 /* Wallet button styling */
-.custom-wallet-button {
+.wallet-adapter-button {
   background: transparent !important;
   color: white !important;
   border: 1px solid #3b82f6 !important;
@@ -64,7 +66,7 @@ html, body {
   padding: 0.75rem 1.5rem !important;
 }
 
-.custom-wallet-button:hover {
+.wallet-adapter-button:hover {
   background: rgba(59, 130, 246, 0.1) !important;
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.4) !important;
 }
@@ -90,26 +92,4 @@ html, body {
 .wallet-adapter-modal-title {
   color: white !important;
   font-family: 'Inter', sans-serif !important;
-}
-
-/* Network background animation */
-@keyframes fadeInOut {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.7; }
-}
-
-.network-bg {
-  animation: fadeInOut 8s infinite;
-}
-
-/* Blinking cursor effect */
-.cursor::after {
-  content: '|';
-  display: inline-block;
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  from, to { opacity: 1; }
-  50% { opacity: 0; }
 }

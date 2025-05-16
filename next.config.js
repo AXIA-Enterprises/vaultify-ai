@@ -5,9 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Use relative asset paths for GitHub Pages
   assetPrefix: './',
-  trailingSlash: true,
+  trailingSlash: false
 }
 
 module.exports = nextConfig

@@ -102,7 +102,7 @@ export default function Home() {
           {/* Footer */}
           <footer className="border-t border-gray-800 py-8 mt-12">
             <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-500 mb-4 md:mb-0">© 2023 Vaultify.ai - All rights reserved</p>
+              <p className="text-gray-500 mb-4 md:mb-0">© 2025 Vaultify.ai - All rights reserved</p>
               
               <div className="flex space-x-6">
                 <a href="#" className="text-gray-500 hover:text-blue-400 transition-colors">

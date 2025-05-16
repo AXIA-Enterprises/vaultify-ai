@@ -5,6 +5,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // IMPORTANT - Remove these lines if present
+  // basePath: '/vaultify-ai',
+  // assetPrefix: '/vaultify-ai',
   trailingSlash: true,
 }
 

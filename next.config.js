@@ -5,9 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // IMPORTANT - Remove these lines if present
-  // basePath: '/vaultify-ai',
-  // assetPrefix: '/vaultify-ai',
+  // Use relative asset paths for GitHub Pages
+  assetPrefix: './',
   trailingSlash: true,
 }
 

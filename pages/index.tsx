@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Vaultify.ai | Secure NFT Escrow</title>
+        <title>Vaultify.ai | Trustless NFT & Token Escrow Built for Solana</title>
         <meta name="description" content="Trustless NFT escrow platform on Solana" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -50,8 +50,7 @@ export default function Home() {
               </h2>
               
               <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
-                Trade NFTs and tokens safely without middlemen. 
-                Eliminate scams with our decentralized blockchain-powered platform.
+               Trade NFTs and SPL tokens securely—no middlemen, no scams. Vaultify.ai uses audited Solana smart contracts to protect every transaction.
               </p>
               
               <div className="flex flex-col md:flex-row gap-6 justify-center mb-20">
@@ -75,21 +74,21 @@ export default function Home() {
                 <div className="bg-black bg-opacity-50 backdrop-blur-sm border border-gray-800 p-8 rounded-lg hover:border-blue-500/30 transition-all group">
                   <h4 className="text-xl font-bold mb-4 text-blue-400">Secure & Trustless</h4>
                   <p className="text-gray-400">
-                    Smart contracts ensure your assets remain secure. No need to trust third parties.
+                    Vaultify’s smart contracts keep your assets safe—without ever relying on third-party custody.
                   </p>
                 </div>
                 
                 <div className="bg-black bg-opacity-50 backdrop-blur-sm border border-gray-800 p-8 rounded-lg hover:border-blue-500/30 transition-all group">
                   <h4 className="text-xl font-bold mb-4 text-blue-400">NFT & Token Support</h4>
                   <p className="text-gray-400">
-                    Trade any Solana NFTs or SPL tokens with confidence.
+                    Easily trade any Solana NFT or SPL token. Vaultify supports all major assets on-chain.
                   </p>
                 </div>
                 
                 <div className="bg-black bg-opacity-50 backdrop-blur-sm border border-gray-800 p-8 rounded-lg hover:border-blue-500/30 transition-all group">
                   <h4 className="text-xl font-bold mb-4 text-blue-400">Verification System</h4>
                   <p className="text-gray-400">
-                    Optional verification for high-value trades.
+                    Add a layer of protection for high-value deals with our trusted third-party verification service.
                   </p>
                 </div>
               </div>

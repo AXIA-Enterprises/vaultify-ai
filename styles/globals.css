@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+:root {
+  --blue-glow: 59, 130, 246;
+}
+
 html, body {
   background-color: #000;
   color: #fff;
@@ -40,6 +44,16 @@ html, body {
   box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
 }
 
+/* Logo glow styling */
+.logo-glow {
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
+  transition: filter 0.3s ease;
+}
+
+.logo-glow:hover {
+  filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.8));
+}
+
 /* Background animation */
 @keyframes pulse {
   0%, 100% {
@@ -52,6 +66,11 @@ html, body {
 
 .animate-bg-pulse {
   animation: pulse 4s ease-in-out infinite;
+}
+
+/* Improved favicon rendering */
+link[rel="icon"] {
+  border-radius: 0;
 }
 
 /* Wallet button styling */
@@ -92,4 +111,42 @@ html, body {
 .wallet-adapter-modal-title {
   color: white !important;
   font-family: 'Inter', sans-serif !important;
+}
+
+/* Button enhancements */
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+button:active::after {
+  opacity: 0.3;
+  transform: scale(60, 60) translate(-50%, -50%);
+  transition: transform 0.6s, opacity 0.6s;
+}
+
+/* Feature card animations */
+.group:hover h4 {
+  transform: translateY(-4px);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .logo-glow {
+    filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.5));
+  }
 }

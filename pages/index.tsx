@@ -11,10 +11,22 @@ export default function Home() {
       <Head>
         <title>Vaultify.ai | Secure NFT Escrow</title>
         <meta name="description" content="Trustless Token & NFT Escrow Built for Solana" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        
+        {/* Primary favicon using PNG */}
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        
+        {/* Fallback favicon */}
+        <link rel="alternate icon" href="/favicon.ico" />
+        
+        {/* Apple touch icon */}
+        <link rel="apple-touch-icon" href="/favicon.png" />
+        
+        {/* Meta tags for social media */}
+        <meta property="og:title" content="Vaultify.ai | Secure NFT Escrow" />
+        <meta property="og:description" content="Trustless Token & NFT Escrow Built for Solana" />
+        <meta property="og:image" content="/logo.png" />
+        <meta property="og:url" content="https://vaultify.ai" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <div className="min-h-screen bg-black text-white relative">
@@ -31,13 +43,24 @@ export default function Home() {
 
         {/* Content (with higher z-index to appear above the background) */}
         <div className="relative z-10">
-          {/* Header - Improved spacing */}
+          {/* Header with logo */}
           <header className="px-6 py-8 mb-6">
             <div className="max-w-7xl mx-auto flex justify-between items-center">
-              <h1 className="text-4xl font-bold tracking-tight">
-                <span className="text-white">Vaultify</span>
-                <span className="text-blue-400">.ai</span>
-              </h1>
+              <div className="flex items-center">
+                {/* Logo */}
+                <div className="w-10 h-10 mr-3">
+                  <img 
+                    src="/logo.png" 
+                    alt="Vaultify.ai Logo" 
+                    className="w-full h-full object-contain logo-glow" 
+                  />
+                </div>
+                {/* Brand name */}
+                <h1 className="text-4xl font-bold tracking-tight">
+                  <span className="text-white">Vaultify</span>
+                  <span className="text-blue-400">.ai</span>
+                </h1>
+              </div>
               
               <div className="ml-auto">
                 <WalletMultiButton />
@@ -99,10 +122,17 @@ export default function Home() {
             </div>
           </main>
 
-          {/* Footer */}
+          {/* Footer with logo */}
           <footer className="border-t border-gray-800 py-8 mt-12">
             <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-500 mb-4 md:mb-0">© 2025 Vaultify.ai - All rights reserved</p>
+              <div className="flex items-center mb-4 md:mb-0">
+                <img 
+                  src="/logo.png" 
+                  alt="Vaultify.ai Logo" 
+                  className="w-6 h-6 mr-2"
+                />
+                <p className="text-gray-500">© 2025 Vaultify.ai - All rights reserved</p>
+              </div>
               
               <div className="flex space-x-6">
                 <a href="#" className="text-gray-500 hover:text-blue-400 transition-colors">
